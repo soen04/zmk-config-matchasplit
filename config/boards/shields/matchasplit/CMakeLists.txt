@@ -2,12 +2,6 @@
 
 message("Building MatchaSplit Shield")
 
-# Include the necessary ZMK modules for keymap and matrix transformation
-target_sources(app PRIVATE
-    src/keymap.c
-    src/matrix_transform.c
-)
-
 # Set the board name and shield type based on the selected SHIELD variable
 if(NOT DEFINED SHIELD)
     message(FATAL_ERROR "SHIELD must be defined (either 'matchasplit_left' or 'matchasplit_right')")
@@ -23,6 +17,12 @@ elseif(SHIELD STREQUAL "matchasplit_right")
 else()
     message(FATAL_ERROR "Unknown shield specified: ${SHIELD}")
 endif()
+
+# Include the necessary ZMK modules for keymap and matrix transformation
+target_sources(app PRIVATE
+    src/keymap.c
+    src/matrix_transform.c
+)
 
 # Ensure Zephyr is included
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
