@@ -21,7 +21,13 @@
 include:
   - board: nice_nano_v2
     shield: matchasplit_left
+    config: matchasplit.conf
+    output: matchasplit_left.uf2
+
   - board: nice_nano_v2
     shield: matchasplit_right
+    config: matchasplit.conf
+    output: matchasplit_right.uf2
+
   - board: nice_nano_v2
     shield: settings_reset
