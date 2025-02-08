@@ -7,63 +7,52 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 &gpio0 {
-    // Define GPIO pins for rows
+    // Define GPIO pins for rows without label
     row0: row0_pin {
         gpio-hog;
         gpios = <9 GPIO_ACTIVE_LOW>;
-        label = "ROW0";
     };
     row1: row1_pin {
         gpio-hog;
         gpios = <10 GPIO_ACTIVE_LOW>;
-        label = "ROW1";
     };
     row2: row2_pin {
         gpio-hog;
         gpios = <11 GPIO_ACTIVE_LOW>;
-        label = "ROW2";
     };
     row3: row3_pin {
         gpio-hog;
         gpios = <13 GPIO_ACTIVE_LOW>;
-        label = "ROW3";
     };
     row4: row4_pin {
         gpio-hog;
         gpios = <15 GPIO_ACTIVE_LOW>;
-        label = "ROW4";
     };
 
     // Define GPIO pins for columns (example pins, adjust as needed)
     col0: col0_pin {
         gpio-hog;
         gpios = <5 GPIO_ACTIVE_HIGH>;
-        label = "COL0";
     };
     col1: col1_pin {
         gpio-hog;
         gpios = <6 GPIO_ACTIVE_HIGH>;
-        label = "COL1";
     };
     col2: col2_pin {
         gpio-hog;
         gpios = <7 GPIO_ACTIVE_HIGH>;
-        label = "COL2";
     };
     col3: col3_pin {
         gpio-hog;
         gpios = <8 GPIO_ACTIVE_HIGH>;
-        label = "COL3";
     };
     col4: col4_pin {
         gpio-hog;
         gpios = <9 GPIO_ACTIVE_HIGH>;
-        label = "COL4";
     };
     col5: col5_pin {
         gpio-hog;
         gpios = <10 GPIO_ACTIVE_HIGH>;
-        label = "COL5";
     };
 };
 
