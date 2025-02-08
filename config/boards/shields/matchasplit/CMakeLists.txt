@@ -2,6 +2,12 @@
 
 message("Building MatchaSplit Shield")
 
+# Include the necessary ZMK modules for keymap and matrix transformation
+target_sources(app PRIVATE
+    src/keymap.c
+    src/matrix_transform.c
+)
+
 # Set the board name and shield type based on the selected SHIELD variable
 if(NOT DEFINED SHIELD)
     message(FATAL_ERROR "SHIELD must be defined (either 'matchasplit_left' or 'matchasplit_right')")
